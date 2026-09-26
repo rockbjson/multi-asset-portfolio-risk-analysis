@@ -3,3 +3,5 @@ numpy
 matplotlib
 jupyter
 yfinance
+pandas-datareader
+jinja2
