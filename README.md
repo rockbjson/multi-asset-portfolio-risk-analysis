@@ -41,7 +41,7 @@ Daily adjusted market prices are used so that historical return calculations acc
 - Historical ETF data: Yahoo Finance, accessed through `yfinance`
 - Risk-free-rate proxy: 3-Month U.S. Treasury Constant Maturity Rate (`DGS3MO`) from FRED, accessed through `pandas-datareader`
 
-The average 3-month Treasury rate over the sample period was approximately **2.86%**, and this was used as the historical risk-free-rate proxy in the Sharpe ratio calculations.
+The average 3-month Treasury rate over the sample period was approximately 2.86%, and this was used as the historical risk-free-rate proxy in the Sharpe ratio calculations.
 
 ## Methodology
 
@@ -111,7 +111,7 @@ Annualized return and volatility are then calculated for each portfolio.
 
 The Equity-Focused portfolio generated the highest historical return, but also experienced the highest volatility.
 
-Adding Treasury-bond exposure reduced volatility from **20.98% to 16.84%**. Introducing gold in the Multi-Asset portfolio reduced volatility further to **15.01%**, while its annualized return remained almost identical to that of the Equity + Bonds portfolio.
+Adding Treasury-bond exposure reduced volatility from 20.98% to 16.84%. Introducing gold in the Multi-Asset portfolio reduced volatility further to 15.01%, while its annualized return remained almost identical to that of the Equity + Bonds portfolio.
 
 ### 6. Risk-Adjusted Performance
 
@@ -131,13 +131,13 @@ where:
 | Equity + Bonds | 13.26% | 16.84% | 0.62 |
 | Multi-Asset | 13.22% | 15.01% | **0.69** |
 
-Within the 2020–2025 sample, the **Multi-Asset portfolio produced the highest Sharpe ratio**, indicating the greatest historical excess return relative to volatility among the three portfolios examined.
+Within the 2020–2025 sample, the Multi-Asset portfolio produced the highest Sharpe ratio, indicating the greatest historical excess return relative to volatility among the three portfolios examined.
 
 ### 7. Rolling Correlation Analysis
 
 A single full-period correlation coefficient can hide changes in asset relationships through time.
 
-To examine this, the project calculates **60-day rolling correlations** for:
+To examine this, the project calculates 60-day rolling correlations for:
 
 - SPY versus IEF
 - SPY versus GLD
@@ -164,7 +164,7 @@ The sensitivity of portfolio volatility to the weight of each asset is measured 
 
 (∂σ_p)/(∂w_i )=(Σw)_i/σ_p 
 
-This provides a **marginal risk measure**, showing how sensitive portfolio volatility is to a small change in each asset's weight around the current allocation.
+This provides a marginal risk measure, showing how sensitive portfolio volatility is to a small change in each asset's weight around the current allocation.
 
 Component risk is then calculated as:
 
@@ -186,11 +186,11 @@ QQQ had the highest marginal risk, indicating that portfolio volatility was most
 
 SPY nevertheless contributed the largest share of total portfolio volatility because it also represented the largest allocation.
 
-The three equity exposures represented **70% of portfolio weight but approximately 95.95% of total portfolio risk**.
+The three equity exposures represented 70% of portfolio weight but approximately 95.95% of total portfolio risk.
 
-In comparison, IEF and GLD represented **30% of portfolio weight but only approximately 4.07% of portfolio risk**.
+In comparison, IEF and GLD represented 30% of portfolio weight but only approximately 4.07% of portfolio risk.
 
-The component risk contributions sum to approximately **15.01 percentage points**, matching the independently calculated annualized volatility of the Multi-Asset portfolio.
+The component risk contributions sum to approximately 15.01 percentage points, matching the independently calculated annualized volatility of the Multi-Asset portfolio.
 
 ## Key Findings
 
@@ -231,21 +231,21 @@ The risk decomposition shows that the equity exposures accounted for the majorit
 
 ## Limitations
 
-- **Historical performance does not imply future performance.** The results describe asset behavior during the 2020–2025 sample period and should not be interpreted as forecasts.
+- Historical performance does not imply future performance. The results describe asset behavior during the 2020–2025 sample period and should not be interpreted as forecasts.
 
-- **Results are sample-period dependent.** Returns, volatility, correlations, and risk contributions could differ substantially over another period.
+- Results are sample-period dependent. Returns, volatility, correlations, and risk contributions could differ substantially over another period.
 
-- **Volatility is the primary measure of risk.** Standard deviation measures variability in returns but does not capture every form of financial risk, including liquidity, credit, and tail risk.
+- Volatility is the primary measure of risk. Standard deviation measures variability in returns but does not capture every form of financial risk, including liquidity, credit, and tail risk.
 
-- **Portfolio weights are hypothetical and held constant.** The calculations apply fixed target weights rather than modelling portfolio weight drift and real-world rebalancing costs.
+- Portfolio weights are hypothetical and held constant. The calculations apply fixed target weights rather than modelling portfolio weight drift and real-world rebalancing costs.
 
-- **Market frictions are excluded.** Transaction costs, taxes, and bid-ask spreads are not modelled.
+- Market frictions are excluded. Transaction costs, taxes, and bid-ask spreads are not modelled.
 
-- **The Sharpe ratio uses a simplified historical risk-free benchmark.** The average 3-month U.S. Treasury rate over the sample period is used rather than allowing the risk-free rate to vary through time within the calculation.
+- The Sharpe ratio uses a simplified historical risk-free benchmark. The average 3-month U.S. Treasury rate over the sample period is used rather than allowing the risk-free rate to vary through time within the calculation.
 
-- **Correlation is not constant.** The rolling-correlation analysis demonstrates that diversification relationships can change considerably under different market conditions.
+- Correlation is not constant. The rolling-correlation analysis demonstrates that diversification relationships can change considerably under different market conditions.
 
-- **Marginal risk is a local sensitivity measure.** Because portfolio weights must sum to 100%, the partial derivative with respect to one asset's weight should not be interpreted as a complete portfolio reallocation strategy.
+- Marginal risk is a local sensitivity measure. Because portfolio weights must sum to 100%, the partial derivative with respect to one asset's weight should not be interpreted as a complete portfolio reallocation strategy.
 
 ## Technologies
 
