@@ -117,11 +117,7 @@ Adding Treasury-bond exposure reduced volatility from **20.98% to 16.84%**. Intr
 
 Portfolio performance is also evaluated using the Sharpe ratio:
 
-\[
-\text{Sharpe Ratio}
-=
-\frac{R_p-R_f}{\sigma_p}
-\]
+(R_p-R_f)/σ_p 
 
 where:
 
@@ -156,30 +152,23 @@ As a mathematical extension, the Multi-Asset portfolio is analyzed using covaria
 
 Portfolio volatility is represented as:
 
-\σ_p=√(w^T Σw)
+σ_p=√(w^T Σw)
 
 where:
 
-- \(\mathbf{w}\) is the vector of portfolio weights
-- \(\Sigma\) is the covariance matrix of asset returns
-- \(\sigma_p\) is portfolio volatility
+- w is the vector of portfolio weights
+- Σ is the covariance matrix of asset returns
+- σ_p is portfolio volatility
 
 The sensitivity of portfolio volatility to the weight of each asset is measured using the partial derivative:
 
-\[
-\frac{\partial \sigma_p}{\partial w_i}
-=
-\frac{(\Sigma\mathbf{w})_i}{\sigma_p}
-\]
+(∂σ_p)/(∂w_i )=(Σw)_i/σ_p 
 
 This provides a **marginal risk measure**, showing how sensitive portfolio volatility is to a small change in each asset's weight around the current allocation.
 
 Component risk is then calculated as:
 
-\[
-w_i
-\frac{\partial \sigma_p}{\partial w_i}
-\]
+w_i  (∂σ_p)/(∂w_i )
 
 allowing total portfolio volatility to be decomposed across the individual holdings.
 
