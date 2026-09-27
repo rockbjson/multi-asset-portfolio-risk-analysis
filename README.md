@@ -156,11 +156,7 @@ As a mathematical extension, the Multi-Asset portfolio is analyzed using covaria
 
 Portfolio volatility is represented as:
 
-\[
-\sigma_p
-=
-\sqrt{\mathbf{w}^{T}\Sigma\mathbf{w}}
-\]
+\σ_p=√(w^T Σw)
 
 where:
 
